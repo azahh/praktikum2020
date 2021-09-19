@@ -1,0 +1,374 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Latihan 2},
+  pdfauthor={Hamzah Abdulloh},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifluatex
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\title{Latihan 2}
+\author{Hamzah Abdulloh}
+\date{9/19/2021}
+
+\begin{document}
+\maketitle
+
+A. \textbf{Tujuan Praktikum}
+
+Memahami jenis-jenis tipe data pada R.
+
+B. \textbf{Alokasi Waktu}
+
+1 x pertemuam = 120 menit
+
+C. \textbf{Dasar Teori}
+
+Variasi tipe data pada R memfasilitasi keberagaman jenis variabel data.
+Sebagai contoh, terdapat data yang terdiri dari sekumpulan angka dan
+data lain yang berisi sekumpulan karakter. Pada contoh lain, ada pula
+data yang berbentuk tabel maupun kumpulan (\emph{list}) angka sederhana.
+Dengan bantuan fungsi \emph{class}, kita akan mendapatkan kemudahan
+dalam mendefinisikan tipe data yang kita miliki:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{a }\OtherTok{\textless{}{-}} \DecValTok{2}
+\FunctionTok{class}\NormalTok{(a)}
+\CommentTok{\#\textgreater{} [1] "numeric"}
+\end{Highlighting}
+\end{Shaded}
+
+Agar dapat bekerja secara efisien dalam menggunakan bahasa pemrograman
+R, penting untuk mempelajari terlebih dahulu tipe data dari
+variabel-variabel yang kita miliki sehingga akan mempermudah dalam
+penentuan proses analisis data yang dapat dilakukan terhadap variabel-
+variabel tersebut
+
+\textbf{\emph{Data Frame}}
+
+Cara paling umum yang dapat digunakan untuk menyimpan \emph{dataset}
+dalam R adalah dalam tipe data \emph{frame}. Secara konseptual, kita
+dapat menganggap data frame sebagai tabel yang terdiri dari baris yang
+memiliki nilai pengamatan dan berbagai variabel yang didefinisikan dalam
+bentuk kolom. Tipe data ini sangat umum digunakan untuk \emph{dataset},
+karena data \emph{frame} dapat menggabungkan berbagai jenis tipe data
+dalam satu objek. Untuk memahami tipe data frame, silahkan mengakses
+contoh dataset pada \emph{library(dslabs)} dan pilih \emph{dataset
+``murders''} menggunakan fungsi \emph{data}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(dslabs) }
+\FunctionTok{data}\NormalTok{(murders) }
+\end{Highlighting}
+\end{Shaded}
+
+Untuk memastikan bahwa \emph{dataset} tersebut tipenya adalah \emph{data
+frame}, dapat digunakan perintah berikut:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{class}\NormalTok{(murders) }
+\CommentTok{\#\textgreater{} [1] "data.frame"  }
+\end{Highlighting}
+\end{Shaded}
+
+Untuk memeriksa lebih lanjut isi \emph{dataset}, dapat pula digunakan
+fungsi \emph{str} untuk mencari tahu lebih rinci mengenai struktur suatu
+objek:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{str}\NormalTok{(murders) }
+\CommentTok{\#\textgreater{} \textquotesingle{}data.frame\textquotesingle{}: 51 obs. of 5 variables: }
+\CommentTok{\#\textgreater{} $ state : chr "Alabama" "Alaska" "Arizona" "Arkansas" ... }
+\CommentTok{\#\textgreater{} $ abb : chr "AL" "AK" "AZ" "AR" ... }
+\CommentTok{\#\textgreater{} $ region : Factor w/ 4 levels "Northeast","South",..: 2 4 4 2 4 4 1 2 2 }
+\CommentTok{\#\textgreater{} 2 ... }
+\CommentTok{\#\textgreater{} $ population: num 4779736 710231 6392017 2915918 37253956 ... }
+\CommentTok{\#\textgreater{} $ total : num 135 19 232 93 1257 ... }
+\end{Highlighting}
+\end{Shaded}
+
+Dengan menggunakan fungsi \emph{str}, dapat diketahui bahwa
+\emph{dataset ``murders''} terdiri dari 51 baris dan lima variabel:
+\emph{state, abb, region, population,} dan \emph{total}. Selanjutnya,
+untuk melihat contoh enam baris pertama pada \emph{dataset}, dapat
+digunakan fungsi \emph{head}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{head}\NormalTok{(murders) }
+\CommentTok{\#\textgreater{} state abb region population total }
+\CommentTok{\#\textgreater{} 1 Alabama AL South 4779736 135 }
+\CommentTok{\#\textgreater{} 2 Alaska AK West 710231 19 }
+\CommentTok{\#\textgreater{} 3 Arizona AZ West 6392017 232 }
+\CommentTok{\#\textgreater{} 4 Arkansas AR South 2915918 93 }
+\CommentTok{\#\textgreater{} 5 California CA West 37253956 1257 }
+\CommentTok{\#\textgreater{} 6 Colorado CO West 5029196 65 }
+\end{Highlighting}
+\end{Shaded}
+
+Untuk analisis awal tiap variabel yang diwakili dalam bentuk kolom pada
+tipe \emph{data frame}, dapat digunakan operator aksesor (\$) dengan
+cara berikut:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{murders}\SpecialCharTok{$}\NormalTok{population }
+\CommentTok{\#\textgreater{} [1] 4779736 710231 6392017 2915918 37253956 5029196 3574097 }
+\CommentTok{\#\textgreater{} [8] 897934 601723 19687653 9920000 1360301 1567582 12830632 }
+\CommentTok{\#\textgreater{} [15] 6483802 3046355 2853118 4339367 4533372 1328361 5773552 }
+\CommentTok{\#\textgreater{} [22] 6547629 9883640 5303925 2967297 5988927 989415 1826341 }
+\CommentTok{\#\textgreater{} [29] 2700551 1316470 8791894 2059179 19378102 9535483 672591 }
+\CommentTok{\#\textgreater{} [36] 11536504 3751351 3831074 12702379 1052567 4625364 814180 }
+\CommentTok{\#\textgreater{} [43] 6346105 25145561 2763885 625741 8001024 6724540 1852994 }
+\CommentTok{\#\textgreater{} [50] 5686986 563626 }
+\end{Highlighting}
+\end{Shaded}
+
+Untuk mengetahui nama-nama dari lima variabel yang dapat dievaluasi
+menggunakan operator aksesor, sebelumnya, melalui fungsi \emph{str},
+telah kita ketahui bahwa variabel yang dimiliki \emph{dataset} adalah:
+\emph{state, abb, region, population,} dan \emph{total}. Sebagai
+alternatif, terdapat pula fungsi \emph{name}, yang dapat digunakan
+seperti contoh dibawah ini:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{names}\NormalTok{(murders) }
+\CommentTok{\#\textgreater{} [1] "state" "abb" "region" "population" "total" }
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{\emph{Vector : numeric, character, dan logical}}
+
+objek
+\emph{murders\(population* terdiri dari sekumpulan numeric atau data-data angka. Sehingga, kita dapat mendefinisikan bahwa tipe data *murders\)population}
+berupa \emph{vector}. Angka tunggal secara teknis dapat didefinisikan
+sebagai vektor dengan panjang 1, tetapi secara umum kita akan\\
+menggunakan \emph{vector} sebagai istilah untuk merujuk ke objek yang
+terdiri dari beberapa entri. Untuk mengidentifikasi banyaknya entri
+dalam suatu \emph{vector} dapat digunakan fungsi \emph{length} seperti
+contoh berikut:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{length}\NormalTok{(murders}\SpecialCharTok{$}\NormalTok{population) }
+\CommentTok{\#\textgreater{} [1] 51 }
+\end{Highlighting}
+\end{Shaded}
+
+\emph{Vector} khusus ini bertipe \emph{numeric} karena populasi terdiri
+dari data-data angka:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{class}\NormalTok{(murders}\SpecialCharTok{$}\NormalTok{population) }
+\CommentTok{\#\textgreater{} [1] "numeric" }
+\end{Highlighting}
+\end{Shaded}
+
+Secara matematis, nilai-nilai dalam \emph{murders\$population} adalah
+berupa \emph{integer}. Namun, secara default, data angka akan diberikan
+tipe \emph{numeric} meskipun sebenarnya data tersebut merupakan bilangan
+bulat.Misalnya, \emph{class(1)} akan mengidentifikasi nilai 1 sebagai
+tipe \emph{numeric}. Untuk mengubah tipe \emph{numeric} menjadi
+\emph{integer}, dapat digunakan fungsi \emph{as.integer()} atau dengan
+menambahkan L pada akhir data angka, contoh: 1L. Untuk melihat
+perbedaannya, silahkan gunakan \emph{class(1L).}
+
+Vector juga dapat digunakan untuk menyimpan \emph{string} dengan tipe
+\emph{character}, Sebagai contoh: nama negara pada \emph{dataset
+``murders''}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{class}\NormalTok{(murders}\SpecialCharTok{$}\NormalTok{state) }
+\CommentTok{\#\textgreater{} [1] "character"}
+\end{Highlighting}
+\end{Shaded}
+
+Jenis vector penting lainnya adalah \emph{logical} yang nilainya berupa
+TRUE atau FALSE.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{z }\OtherTok{\textless{}{-}} \DecValTok{3} \SpecialCharTok{==} \DecValTok{2} 
+\NormalTok{z }
+\CommentTok{\#\textgreater{} [1] FALSE }
+\FunctionTok{class}\NormalTok{(z) }
+\CommentTok{\#\textgreater{} [1] "logical"}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{\emph{Factor}}
+
+Dalam \emph{dataset ``murders''}, variabel \emph{state} yang berisi data
+karakter bukan bertipe \emph{vector: character,} namun, tipe datanya
+adalah \emph{factor}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{class}\NormalTok{(murders}\SpecialCharTok{$}\NormalTok{region) }
+\CommentTok{\#\textgreater{} [1] "factor" }
+\end{Highlighting}
+\end{Shaded}
+
+Faktor berguna untuk menyimpan data kategorikal. Dapat dilihat, bahwa
+hanya terdapat 4 wilayah pada variabel \emph{state}. Untuk melihat
+jumlah kategori yang dimiliki oleh variabel dengan tipe data
+\emph{factor} dapat digunakan fungsi \emph{level}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{levels}\NormalTok{(murders}\SpecialCharTok{$}\NormalTok{region) }
+\CommentTok{\#\textgreater{} [1] "Northeast" "South" "North Central" "West"}
+\end{Highlighting}
+\end{Shaded}
+
+Pada \emph{background process}, R menyimpan level sebagai bilangan bulat
+yang memiliki peta tersendiri untuk melacak arti label dari bilangan
+tersebut. Hal ini dimaksudkan untuk penghematan memori, terutama apabila
+karakter dari tiap level cukup panjang. Standarnya, level akan
+ditampilkan sesuai urutan abjad.
+
+\textbf{\emph{Lists}} Data frame merupakan sekumpulan \emph{list} yang
+memiliki kelas yang berbeda-beda. Sama halnya dengan data \emph{frame},
+analisis \emph{list} dapat dilakukan dengan menggunakan operator aksesor
+(\$) dan dua kurung siku ({[}{[}).
+
+Matriks Matriks merupakan tipe data yang mirip dengan \emph{data frame}
+karena keduanya memiliki dua dimensi, yaitu: baris dan kolom. Namun,
+sama halnya dengan tipe data \emph{vector} numerik, karakter dan logis,
+entri dalam matriks harus terdiri dari jenis \emph{vector} yang sama.
+Dalam hal ini, \emph{data frame} dapat dikatakan sebagai tipe data yang
+paling cocok untuk menyimpan data, karena kita dapat memiliki karakter,
+faktor, dan angka sekaligus dalam satu data \emph{frame}. Namun matriks
+memiliki satu keunggulan yang tidak dimiliki oleh tipe data frame: pada
+matriks dapat dilakukan operasi aljabar. Untuk mendefinisikan matriks,
+dapat digunakan fungsi matrix dengan mendefinisikan pula argumen berupa
+jumlah baris dan kolom yang diinginkan.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{mat }\OtherTok{\textless{}{-}} \FunctionTok{matrix}\NormalTok{(}\DecValTok{1}\SpecialCharTok{:}\DecValTok{12}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{3}\NormalTok{) }
+\NormalTok{mat }
+\CommentTok{\#\textgreater{}      [,1] [,2] [,3] }
+\CommentTok{\#\textgreater{} [1,]   1    5    9 }
+\CommentTok{\#\textgreater{} [2,]   2    6   10 }
+\CommentTok{\#\textgreater{} [3,]   3    7   11 }
+\CommentTok{\#\textgreater{} [4,]   4    8   12 }
+\end{Highlighting}
+\end{Shaded}
+
+Untuk mengakses entri tertentu dalam matriks, dapat digunakan tanda
+kurung siku ({[}). Sebagai contoh, kita akan menampilkan data pada baris
+kedua, kolom ketiga, menggunakan:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{mat[}\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{] }
+\CommentTok{\#\textgreater{} [1] 10 }
+\end{Highlighting}
+\end{Shaded}
+
+
+\end{document}
