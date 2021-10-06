@@ -110,8 +110,8 @@
 \begin{document}
 \maketitle
 
-\hypertarget{tugas-modul-3}{%
-\subsection{Tugas Modul 3}\label{tugas-modul-3}}
+\hypertarget{latihan-modul-3}{%
+\subsection{Latihan Modul 3}\label{latihan-modul-3}}
 
 Import Library
 
@@ -122,14 +122,28 @@ Import Library
 \end{Highlighting}
 \end{Shaded}
 
+\hypertarget{gunakan-fungsi-str-untuk-memeriksa-struktur-objek-murders.-manakah-dari-pernyataan-berikut-ini-yang-paling-menggambarkan-karakter-dari-tiap-variabel-pada-data-frame}{%
+\subsubsection{1. Gunakan fungsi str untuk memeriksa struktur objek
+``murders''. Manakah dari pernyataan berikut ini yang paling
+menggambarkan karakter dari tiap variabel pada data
+frame?}\label{gunakan-fungsi-str-untuk-memeriksa-struktur-objek-murders.-manakah-dari-pernyataan-berikut-ini-yang-paling-menggambarkan-karakter-dari-tiap-variabel-pada-data-frame}}
+
 \begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
+\def\labelenumi{\alph{enumi}.}
 \tightlist
 \item
-  Gunakan fungsi str untuk memeriksa struktur objek ``murders''. Manakah
-  dari pernyataan berikut ini yang paling menggambarkan karakter dari
-  tiap variabel pada data frame?
+  Terdiri dari 51 negara.
+\item
+  Data berisi tingkat pembunuhan pada 50 negara bagian dan DC.
+\item
+  Data berisi Nama negara bagian, singkatan dari nama negara bagian,
+  wilayah negara bagian, dan populasi negara bagian serta jumlah total
+  pembunuhan pada tahun 2010.
+\item
+  str tidak menunjukkan informasi yang relevan.
 \end{enumerate}
+
+\textbf{Jawaban}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -146,48 +160,55 @@ Import Library
 ##  $ total     : num  135 19 232 93 1257 ...
 \end{verbatim}
 
+\textbf{Maka jawaban yang benar adalah ``C'' }
+
+\hypertarget{sebutkan-apa-saja-nama-kolom-yang-digunakan-pada-data-frame}{%
+\paragraph{2. Sebutkan apa saja nama kolom yang digunakan pada data
+frame}\label{sebutkan-apa-saja-nama-kolom-yang-digunakan-pada-data-frame}}
+
+.
+
+\textbf{Jawaban}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{names}\NormalTok{(murders)}
+\end{Highlighting}
+\end{Shaded}
+
 \begin{verbatim}
-a. Terdiri dari 51 negara.
-b. Data berisi tingkat pembunuhan pada 50 negara bagian dan DC.
-c. Data berisi Nama negara bagian, singkatan dari nama negara bagian, wilayah
-  negara bagian, dan populasi negara bagian serta jumlah total pembunuhan pada
-  tahun 2010.
-d. str tidak menunjukkan informasi yang relevan.
+## [1] "state"      "abb"        "region"     "population" "total"
 \end{verbatim}
 
-Berdasarkan pernyataan diatas yang paling menggambarkan karaktek tiap
-variabel pada data frame adalah yang C
+\textbf{Nama kolom yang digunakan pada data frame adalah : state, abb,
+region, pupulation dan total}
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{1}
-\tightlist
-\item
-  Sebutkan apa saja nama kolom yang digunakan pada data frame ada 5
-  yaitu
+\hypertarget{gunakan-operator-aksesor-untuk-mengekstrak-informasi-singkatan-negara-dan-menyimpannya-pada-objek-a.-sebutkan-jenis-class-dari-objek-tersebut}{%
+\paragraph{3. Gunakan operator aksesor (\$) untuk mengekstrak informasi
+singkatan negara dan menyimpannya pada objek ``a''. Sebutkan jenis class
+dari objek
+tersebut}\label{gunakan-operator-aksesor-untuk-mengekstrak-informasi-singkatan-negara-dan-menyimpannya-pada-objek-a.-sebutkan-jenis-class-dari-objek-tersebut}}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    state
-  \item
-    abb
-  \item
-    region
-  \item
-    population
-  \item
-    total
-  \end{itemize}
-\item
-  Gunakan operator aksesor (\$) untuk mengekstrak informasi singkatan
-  negara dan menyimpannya pada objek ``a''. Sebutkan jenis class dari
-  objek tersebut.
-\end{enumerate}
+.
+
+\textbf{Jawaban}
 
 \begin{Shaded}
 \begin{Highlighting}[]
 \NormalTok{a }\OtherTok{\textless{}{-}}\NormalTok{ murders}\SpecialCharTok{$}\NormalTok{abb}
+\NormalTok{a}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1] "AL" "AK" "AZ" "AR" "CA" "CO" "CT" "DE" "DC" "FL" "GA" "HI" "ID" "IL" "IN"
+## [16] "IA" "KS" "KY" "LA" "ME" "MD" "MA" "MI" "MN" "MS" "MO" "MT" "NE" "NV" "NH"
+## [31] "NJ" "NM" "NY" "NC" "ND" "OH" "OK" "OR" "PA" "RI" "SC" "SD" "TN" "TX" "UT"
+## [46] "VT" "VA" "WA" "WV" "WI" "WY"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
 \FunctionTok{class}\NormalTok{(a)}
 \end{Highlighting}
 \end{Shaded}
@@ -196,20 +217,45 @@ variabel pada data frame adalah yang C
 ## [1] "character"
 \end{verbatim}
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{3}
-\tightlist
-\item
-  Gunakan tanda kurung siku untuk mengekstrak singkatan negara dan
-  menyimpannya pada objek ``b''. Tentukan apakah variabel ``a'' dan
-  ``b'' bernilai sama?
-\end{enumerate}
+\textbf{objek a merupakan character}
+
+\hypertarget{gunakan-tanda-kurung-siku-untuk-mengekstrak-singkatan-negara-dan-menyimpannya-pada-objek-b.-tentukan-apakah-variabel-a-dan-b-bernilai-sama}{%
+\paragraph{4. Gunakan tanda kurung siku untuk mengekstrak singkatan
+negara dan menyimpannya pada objek ``b''. Tentukan apakah variabel ``a''
+dan ``b'' bernilai
+sama}\label{gunakan-tanda-kurung-siku-untuk-mengekstrak-singkatan-negara-dan-menyimpannya-pada-objek-b.-tentukan-apakah-variabel-a-dan-b-bernilai-sama}}
+
+?
+
+\textbf{Jawaban}
 
 \begin{Shaded}
 \begin{Highlighting}[]
+\NormalTok{a }\OtherTok{\textless{}{-}}\NormalTok{ murders}\SpecialCharTok{$}\NormalTok{abb}
 \NormalTok{b }\OtherTok{\textless{}{-}}\NormalTok{ murders[}\StringTok{\textquotesingle{}abb\textquotesingle{}}\NormalTok{]}
-\FunctionTok{print}\NormalTok{(b)}
+\end{Highlighting}
+\end{Shaded}
+
+variabel a
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{a}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1] "AL" "AK" "AZ" "AR" "CA" "CO" "CT" "DE" "DC" "FL" "GA" "HI" "ID" "IL" "IN"
+## [16] "IA" "KS" "KY" "LA" "ME" "MD" "MA" "MI" "MN" "MS" "MO" "MT" "NE" "NV" "NH"
+## [31] "NJ" "NM" "NY" "NC" "ND" "OH" "OK" "OR" "PA" "RI" "SC" "SD" "TN" "TX" "UT"
+## [46] "VT" "VA" "WA" "WV" "WI" "WY"
+\end{verbatim}
+
+variabel b
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{b}
 \end{Highlighting}
 \end{Shaded}
 
@@ -268,47 +314,41 @@ variabel pada data frame adalah yang C
 ## 51  WY
 \end{verbatim}
 
+kelas a
+
 \begin{Shaded}
 \begin{Highlighting}[]
-\FunctionTok{print}\NormalTok{(a)}
+\FunctionTok{class}\NormalTok{(a)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] "AL" "AK" "AZ" "AR" "CA" "CO" "CT" "DE" "DC" "FL" "GA" "HI" "ID" "IL" "IN"
-## [16] "IA" "KS" "KY" "LA" "ME" "MD" "MA" "MI" "MN" "MS" "MO" "MT" "NE" "NV" "NH"
-## [31] "NJ" "NM" "NY" "NC" "ND" "OH" "OK" "OR" "PA" "RI" "SC" "SD" "TN" "TX" "UT"
-## [46] "VT" "VA" "WA" "WV" "WI" "WY"
+## [1] "character"
 \end{verbatim}
 
-Perbedaan Antara penggunaan kurung siku dan supressor adalah variabel
-yang dihasilkan jika menggunakan supressor variabel yang dihasilkan
-merupakan array, sedangkan kurung siku menghasilkan data frame
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{4}
-\tightlist
-\item
-  Variabel region memiliki tipe data: factor. Dengan satu baris kode,
-  gunakan fungsi level dan length untuk menentukan jumlah region yang
-  dimiliki dataset.
-\end{enumerate}
+kelas b
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{region }\OtherTok{\textless{}{-}}\NormalTok{ murders}\SpecialCharTok{$}\NormalTok{region}
-\FunctionTok{levels}\NormalTok{(region)}
+\FunctionTok{class}\NormalTok{(b)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-## [1] "Northeast"     "South"         "North Central" "West"
+## [1] "data.frame"
 \end{verbatim}
+
+\textbf{variabel a dan b memiliki isi yang sama namun dengan tipe yang
+berbeda. a merupakan vector charachter sementa b adalah data frame}
+\#\#\#\# 5. Variabel region memiliki tipe data: factor. Dengan satu
+baris kode, gunakan fungsi level dan length untuk menentukan jumlah
+region yang dimiliki dataset .
+
+\textbf{Jawaban}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\FunctionTok{length}\NormalTok{(region)}
+\FunctionTok{length}\NormalTok{(murders}\SpecialCharTok{$}\NormalTok{region)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -316,26 +356,34 @@ merupakan array, sedangkan kurung siku menghasilkan data frame
 ## [1] 51
 \end{verbatim}
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{5}
-\tightlist
-\item
-  Fungsi table dapat digunakan untuk ekstraksi data pada tipe vektor dan
-  menampilkan frekuensi dari setiap elemen. Dengan menerapkan fungsi
-  tersebut, dapat diketahui jumlah state pada tiap region. Gunakan
-  fungsi table dalam satu baris kode untuk menampilkan tabel baru yang
-  berisi jumlah state pada tiap region.
-\end{enumerate}
-
 \begin{Shaded}
 \begin{Highlighting}[]
-\FunctionTok{table}\NormalTok{(region)}
+\FunctionTok{levels}\NormalTok{(murders}\SpecialCharTok{$}\NormalTok{region) }
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-## region
+## [1] "Northeast"     "South"         "North Central" "West"
+\end{verbatim}
+
+\textbf{Jumlah keseluruhan region yang dimiliki oleh dataset adalah 51
+dengan 4 jenis diantaranya : ``Northeast'' ``South'' ``North Central''
+``West'' } \#\#\#\# 6. Fungsi table dapat digunakan untuk ekstraksi data
+pada tipe vektor dan menampilkan frekuensi dari setiap elemen. Dengan
+menerapkan fungsi tersebut, dapat diketahui jumlah state pada tiap
+region. Gunakan fungsi table dalam satu baris kode untuk menampilkan
+tabel baru yang berisi jumlah state pada tiap region .
+
+\textbf{Jawaban}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{table}\NormalTok{(murders}\SpecialCharTok{$}\NormalTok{region)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
 ##     Northeast         South North Central          West 
 ##             9            17            12            13
 \end{verbatim}
