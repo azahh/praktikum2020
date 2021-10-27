@@ -3,18 +3,23 @@ title: "Modul 3"
 author: "Hamzah Abdulloh"
 date: "9/29/2021"
 output:
-  pdf_document: default
   word_document: default
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-### Latihan Modul 3
+## Latihan Modul 3
 
+Import Library
+```{r}
+library(dslabs)
+data(murders) 
+```
 
-#### 1. Gunakan fungsi str untuk memeriksa struktur objek “murders”. Manakah dari pernyataan berikut ini yang paling menggambarkan karakter dari tiap variabel pada data frame? 
+### 1. Gunakan fungsi str untuk memeriksa struktur objek “murders”. Manakah dari pernyataan berikut ini yang paling menggambarkan karakter dari tiap variabel pada data frame? 
   a. Terdiri dari 51 negara. 
   b. Data berisi tingkat pembunuhan pada 50 negara bagian dan DC. 
   c. Data berisi Nama negara bagian, singkatan dari nama negara bagian,           wilayah negara bagian, dan populasi negara bagian serta jumlah total         pembunuhan pada tahun 2010. 
